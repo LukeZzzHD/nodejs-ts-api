@@ -4,7 +4,10 @@
 	"description": "A simple nodejs API written in TypeScript",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon --inspect index.ts",
+		"lint": "tslint './**/*.ts' --project tsconfig.json",
+		"build": "tsc --build tsconfig.json"
 	},
 	"repository": {
 		"type": "git",
@@ -40,5 +43,13 @@
 		"tslint-config-airbnb": "^5.11.1",
 		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.5.2"
+	},
+	"dependencies": {
+		"body-parser": "^1.19.0",
+		"cookie-parser": "^1.4.4",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"faker": "^4.1.0",
+		"jsonwebtoken": "^8.5.1"
 	}
 }
